@@ -1,0 +1,958 @@
+ 
+This program solves 8-puzzles using the A* Tree/Graph Search algorithms.
+Please select an option from the following menu: 
+---------------------------------------------------------- 
+1. Generate random puzzle configurations 
+2. Enter a custom configuration. 
+3. Exit 
+---------------------------------------------------------- 
+ Which option?: 2
+
+---------------------------------------------------------- 
+Which heuristic would you like to evaluate with?: 
+ 1. Hamming Distance (The number of misplaced tiles)
+ 2. Manhattan Distance (The sum of distance away from goal state)
+ 3. Run Both! (Hamming will be first, followed by Manhattan.
+---------------------------------------------------------- 
+Which option?: 1
+Please enter your integer array: 3 2 5 6 0 8 7 1 4
+This is your generated puzzle
+[ 3 2 5 ]
+[ 6 0 8 ]
+[ 7 1 4 ]
+What type of search? : 
+1. Graph Search 
+2. Tree Search 
+Please enter your option: 
+2
+
+ITERATION # 1
+
+*************************************************************************
+
+Parent
+
+[ 3 2 5 ]
+[ 6 0 8 ]
+[ 7 1 4 ]
+COST = 9
+Current Depth == 0
+
+Child 
+[ 3 2 5 ]
+[ 0 6 8 ]
+[ 7 1 4 ]
+COST = 10 Current Depth = 1	Time: 158000ms
+
+Child 
+[ 3 2 5 ]
+[ 6 8 0 ]
+[ 7 1 4 ]
+COST = 10 Current Depth = 1	Time: 169600ms
+
+Child 
+[ 3 0 5 ]
+[ 6 2 8 ]
+[ 7 1 4 ]
+COST = 10 Current Depth = 1	Time: 147000ms
+
+Child 
+[ 3 2 5 ]
+[ 6 1 8 ]
+[ 7 0 4 ]
+COST = 10 Current Depth = 1	Time: 182000ms
+ITERATION # 2
+
+*************************************************************************
+
+Parent
+
+[ 3 2 5 ]
+[ 0 6 8 ]
+[ 7 1 4 ]
+COST = 10
+Current Depth == 1
+
+Child 
+[ 3 2 5 ]
+[ 6 0 8 ]
+[ 7 1 4 ]
+COST = 11 Current Depth = 2	Time: 141600ms
+
+Child 
+[ 0 2 5 ]
+[ 3 6 8 ]
+[ 7 1 4 ]
+COST = 9 Current Depth = 2	Time: 154300ms
+
+Child 
+[ 3 2 5 ]
+[ 7 6 8 ]
+[ 0 1 4 ]
+COST = 11 Current Depth = 2	Time: 182800ms
+ITERATION # 3
+
+*************************************************************************
+
+Parent
+
+[ 0 2 5 ]
+[ 3 6 8 ]
+[ 7 1 4 ]
+COST = 9
+Current Depth == 2
+
+Child 
+[ 2 0 5 ]
+[ 3 6 8 ]
+[ 7 1 4 ]
+COST = 11 Current Depth = 3	Time: 144400ms
+
+Child 
+[ 3 2 5 ]
+[ 0 6 8 ]
+[ 7 1 4 ]
+COST = 12 Current Depth = 3	Time: 142200ms
+ITERATION # 4
+
+*************************************************************************
+
+Parent
+
+[ 3 2 5 ]
+[ 6 1 8 ]
+[ 7 0 4 ]
+COST = 10
+Current Depth == 1
+
+Child 
+[ 3 2 5 ]
+[ 6 1 8 ]
+[ 0 7 4 ]
+COST = 10 Current Depth = 2	Time: 164000ms
+
+Child 
+[ 3 2 5 ]
+[ 6 1 8 ]
+[ 7 4 0 ]
+COST = 11 Current Depth = 2	Time: 123500ms
+
+Child 
+[ 3 2 5 ]
+[ 6 0 8 ]
+[ 7 1 4 ]
+COST = 11 Current Depth = 2	Time: 128900ms
+ITERATION # 5
+
+*************************************************************************
+
+Parent
+
+[ 3 2 5 ]
+[ 6 8 0 ]
+[ 7 1 4 ]
+COST = 10
+Current Depth == 1
+
+Child 
+[ 3 2 5 ]
+[ 6 0 8 ]
+[ 7 1 4 ]
+COST = 11 Current Depth = 2	Time: 141500ms
+
+Child 
+[ 3 2 0 ]
+[ 6 8 5 ]
+[ 7 1 4 ]
+COST = 10 Current Depth = 2	Time: 117700ms
+
+Child 
+[ 3 2 5 ]
+[ 6 8 4 ]
+[ 7 1 0 ]
+COST = 11 Current Depth = 2	Time: 224200ms
+ITERATION # 6
+
+*************************************************************************
+
+Parent
+
+[ 3 0 5 ]
+[ 6 2 8 ]
+[ 7 1 4 ]
+COST = 10
+Current Depth == 1
+
+Child 
+[ 0 3 5 ]
+[ 6 2 8 ]
+[ 7 1 4 ]
+COST = 10 Current Depth = 2	Time: 117100ms
+
+Child 
+[ 3 5 0 ]
+[ 6 2 8 ]
+[ 7 1 4 ]
+COST = 11 Current Depth = 2	Time: 102500ms
+
+Child 
+[ 3 2 5 ]
+[ 6 0 8 ]
+[ 7 1 4 ]
+COST = 11 Current Depth = 2	Time: 108100ms
+ITERATION # 7
+
+*************************************************************************
+
+Parent
+
+[ 3 2 0 ]
+[ 6 8 5 ]
+[ 7 1 4 ]
+COST = 10
+Current Depth == 2
+
+Child 
+[ 3 0 2 ]
+[ 6 8 5 ]
+[ 7 1 4 ]
+COST = 10 Current Depth = 3	Time: 114000ms
+
+Child 
+[ 3 2 5 ]
+[ 6 8 0 ]
+[ 7 1 4 ]
+COST = 12 Current Depth = 3	Time: 115000ms
+ITERATION # 8
+
+*************************************************************************
+
+Parent
+
+[ 0 3 5 ]
+[ 6 2 8 ]
+[ 7 1 4 ]
+COST = 10
+Current Depth == 2
+
+Child 
+[ 3 0 5 ]
+[ 6 2 8 ]
+[ 7 1 4 ]
+COST = 12 Current Depth = 3	Time: 115200ms
+
+Child 
+[ 6 3 5 ]
+[ 0 2 8 ]
+[ 7 1 4 ]
+COST = 12 Current Depth = 3	Time: 143800ms
+ITERATION # 9
+
+*************************************************************************
+
+Parent
+
+[ 3 0 2 ]
+[ 6 8 5 ]
+[ 7 1 4 ]
+COST = 10
+Current Depth == 3
+
+Child 
+[ 0 3 2 ]
+[ 6 8 5 ]
+[ 7 1 4 ]
+COST = 10 Current Depth = 4	Time: 104800ms
+
+Child 
+[ 3 2 0 ]
+[ 6 8 5 ]
+[ 7 1 4 ]
+COST = 12 Current Depth = 4	Time: 91400ms
+
+Child 
+[ 3 8 2 ]
+[ 6 0 5 ]
+[ 7 1 4 ]
+COST = 11 Current Depth = 4	Time: 90300ms
+ITERATION # 10
+
+*************************************************************************
+
+Parent
+
+[ 3 2 5 ]
+[ 6 1 8 ]
+[ 0 7 4 ]
+COST = 10
+Current Depth == 2
+
+Child 
+[ 3 2 5 ]
+[ 6 1 8 ]
+[ 7 0 4 ]
+COST = 12 Current Depth = 3	Time: 88300ms
+
+Child 
+[ 3 2 5 ]
+[ 0 1 8 ]
+[ 6 7 4 ]
+COST = 10 Current Depth = 3	Time: 89600ms
+ITERATION # 11
+
+*************************************************************************
+
+Parent
+
+[ 0 3 2 ]
+[ 6 8 5 ]
+[ 7 1 4 ]
+COST = 10
+Current Depth == 4
+
+Child 
+[ 3 0 2 ]
+[ 6 8 5 ]
+[ 7 1 4 ]
+COST = 12 Current Depth = 5	Time: 82200ms
+
+Child 
+[ 6 3 2 ]
+[ 0 8 5 ]
+[ 7 1 4 ]
+COST = 12 Current Depth = 5	Time: 94200ms
+ITERATION # 12
+
+*************************************************************************
+
+Parent
+
+[ 3 2 5 ]
+[ 0 1 8 ]
+[ 6 7 4 ]
+COST = 10
+Current Depth == 3
+
+Child 
+[ 3 2 5 ]
+[ 1 0 8 ]
+[ 6 7 4 ]
+COST = 11 Current Depth = 4	Time: 74100ms
+
+Child 
+[ 0 2 5 ]
+[ 3 1 8 ]
+[ 6 7 4 ]
+COST = 9 Current Depth = 4	Time: 77500ms
+
+Child 
+[ 3 2 5 ]
+[ 6 1 8 ]
+[ 0 7 4 ]
+COST = 12 Current Depth = 4	Time: 73300ms
+ITERATION # 13
+
+*************************************************************************
+
+Parent
+
+[ 0 2 5 ]
+[ 3 1 8 ]
+[ 6 7 4 ]
+COST = 9
+Current Depth == 4
+
+Child 
+[ 2 0 5 ]
+[ 3 1 8 ]
+[ 6 7 4 ]
+COST = 11 Current Depth = 5	Time: 65400ms
+
+Child 
+[ 3 2 5 ]
+[ 0 1 8 ]
+[ 6 7 4 ]
+COST = 12 Current Depth = 5	Time: 68200ms
+ITERATION # 14
+
+*************************************************************************
+
+Parent
+
+[ 3 2 5 ]
+[ 6 8 4 ]
+[ 7 1 0 ]
+COST = 11
+Current Depth == 2
+
+Child 
+[ 3 2 5 ]
+[ 6 8 4 ]
+[ 7 0 1 ]
+COST = 12 Current Depth = 3	Time: 71600ms
+
+Child 
+[ 3 2 5 ]
+[ 6 8 0 ]
+[ 7 1 4 ]
+COST = 12 Current Depth = 3	Time: 80700ms
+ITERATION # 15
+
+*************************************************************************
+
+Parent
+
+[ 3 2 5 ]
+[ 6 1 8 ]
+[ 7 4 0 ]
+COST = 11
+Current Depth == 2
+
+Child 
+[ 3 2 5 ]
+[ 6 1 8 ]
+[ 7 0 4 ]
+COST = 12 Current Depth = 3	Time: 75400ms
+
+Child 
+[ 3 2 5 ]
+[ 6 1 0 ]
+[ 7 4 8 ]
+COST = 11 Current Depth = 3	Time: 69600ms
+ITERATION # 16
+
+*************************************************************************
+
+Parent
+
+[ 3 2 5 ]
+[ 6 0 8 ]
+[ 7 1 4 ]
+COST = 11
+Current Depth == 2
+
+Child 
+[ 3 2 5 ]
+[ 0 6 8 ]
+[ 7 1 4 ]
+COST = 12 Current Depth = 3	Time: 72200ms
+
+Child 
+[ 3 2 5 ]
+[ 6 8 0 ]
+[ 7 1 4 ]
+COST = 12 Current Depth = 3	Time: 93800ms
+
+Child 
+[ 3 0 5 ]
+[ 6 2 8 ]
+[ 7 1 4 ]
+COST = 12 Current Depth = 3	Time: 67200ms
+
+Child 
+[ 3 2 5 ]
+[ 6 1 8 ]
+[ 7 0 4 ]
+COST = 12 Current Depth = 3	Time: 73000ms
+ITERATION # 17
+
+*************************************************************************
+
+Parent
+
+[ 3 2 5 ]
+[ 1 0 8 ]
+[ 6 7 4 ]
+COST = 11
+Current Depth == 4
+
+Child 
+[ 3 2 5 ]
+[ 0 1 8 ]
+[ 6 7 4 ]
+COST = 12 Current Depth = 5	Time: 66000ms
+
+Child 
+[ 3 2 5 ]
+[ 1 8 0 ]
+[ 6 7 4 ]
+COST = 12 Current Depth = 5	Time: 64700ms
+
+Child 
+[ 3 0 5 ]
+[ 1 2 8 ]
+[ 6 7 4 ]
+COST = 12 Current Depth = 5	Time: 71900ms
+
+Child 
+[ 3 2 5 ]
+[ 1 7 8 ]
+[ 6 0 4 ]
+COST = 13 Current Depth = 5	Time: 78800ms
+ITERATION # 18
+
+*************************************************************************
+
+Parent
+
+[ 2 0 5 ]
+[ 3 1 8 ]
+[ 6 7 4 ]
+COST = 11
+Current Depth == 5
+
+Child 
+[ 0 2 5 ]
+[ 3 1 8 ]
+[ 6 7 4 ]
+COST = 11 Current Depth = 6	Time: 61200ms
+
+Child 
+[ 2 5 0 ]
+[ 3 1 8 ]
+[ 6 7 4 ]
+COST = 12 Current Depth = 6	Time: 60300ms
+
+Child 
+[ 2 1 5 ]
+[ 3 0 8 ]
+[ 6 7 4 ]
+COST = 11 Current Depth = 6	Time: 73800ms
+ITERATION # 19
+
+*************************************************************************
+
+Parent
+
+[ 3 2 5 ]
+[ 6 1 0 ]
+[ 7 4 8 ]
+COST = 11
+Current Depth == 3
+
+Child 
+[ 3 2 5 ]
+[ 6 0 1 ]
+[ 7 4 8 ]
+COST = 12 Current Depth = 4	Time: 58400ms
+
+Child 
+[ 3 2 0 ]
+[ 6 1 5 ]
+[ 7 4 8 ]
+COST = 11 Current Depth = 4	Time: 57800ms
+
+Child 
+[ 3 2 5 ]
+[ 6 1 8 ]
+[ 7 4 0 ]
+COST = 13 Current Depth = 4	Time: 69000ms
+ITERATION # 20
+
+*************************************************************************
+
+Parent
+
+[ 3 5 0 ]
+[ 6 2 8 ]
+[ 7 1 4 ]
+COST = 11
+Current Depth == 2
+
+Child 
+[ 3 0 5 ]
+[ 6 2 8 ]
+[ 7 1 4 ]
+COST = 12 Current Depth = 3	Time: 63700ms
+
+Child 
+[ 3 5 8 ]
+[ 6 2 0 ]
+[ 7 1 4 ]
+COST = 12 Current Depth = 3	Time: 57300ms
+ITERATION # 21
+
+*************************************************************************
+
+Parent
+
+[ 3 2 5 ]
+[ 7 6 8 ]
+[ 0 1 4 ]
+COST = 11
+Current Depth == 2
+
+Child 
+[ 3 2 5 ]
+[ 7 6 8 ]
+[ 1 0 4 ]
+COST = 12 Current Depth = 3	Time: 57000ms
+
+Child 
+[ 3 2 5 ]
+[ 0 6 8 ]
+[ 7 1 4 ]
+COST = 12 Current Depth = 3	Time: 74600ms
+ITERATION # 22
+
+*************************************************************************
+
+Parent
+
+[ 0 2 5 ]
+[ 3 1 8 ]
+[ 6 7 4 ]
+COST = 11
+Current Depth == 6
+
+Child 
+[ 2 0 5 ]
+[ 3 1 8 ]
+[ 6 7 4 ]
+COST = 13 Current Depth = 7	Time: 51200ms
+
+Child 
+[ 3 2 5 ]
+[ 0 1 8 ]
+[ 6 7 4 ]
+COST = 14 Current Depth = 7	Time: 51100ms
+ITERATION # 23
+
+*************************************************************************
+
+Parent
+
+[ 2 1 5 ]
+[ 3 0 8 ]
+[ 6 7 4 ]
+COST = 11
+Current Depth == 6
+
+Child 
+[ 2 1 5 ]
+[ 0 3 8 ]
+[ 6 7 4 ]
+COST = 13 Current Depth = 7	Time: 52300ms
+
+Child 
+[ 2 1 5 ]
+[ 3 8 0 ]
+[ 6 7 4 ]
+COST = 12 Current Depth = 7	Time: 55100ms
+
+Child 
+[ 2 0 5 ]
+[ 3 1 8 ]
+[ 6 7 4 ]
+COST = 13 Current Depth = 7	Time: 53200ms
+
+Child 
+[ 2 1 5 ]
+[ 3 7 8 ]
+[ 6 0 4 ]
+COST = 13 Current Depth = 7	Time: 82700ms
+ITERATION # 24
+
+*************************************************************************
+
+Parent
+
+[ 3 2 0 ]
+[ 6 1 5 ]
+[ 7 4 8 ]
+COST = 11
+Current Depth == 4
+
+Child 
+[ 3 0 2 ]
+[ 6 1 5 ]
+[ 7 4 8 ]
+COST = 11 Current Depth = 5	Time: 64600ms
+
+Child 
+[ 3 2 5 ]
+[ 6 1 0 ]
+[ 7 4 8 ]
+COST = 13 Current Depth = 5	Time: 55300ms
+ITERATION # 25
+
+*************************************************************************
+
+Parent
+
+[ 3 8 2 ]
+[ 6 0 5 ]
+[ 7 1 4 ]
+COST = 11
+Current Depth == 4
+
+Child 
+[ 3 8 2 ]
+[ 0 6 5 ]
+[ 7 1 4 ]
+COST = 12 Current Depth = 5	Time: 50500ms
+
+Child 
+[ 3 8 2 ]
+[ 6 5 0 ]
+[ 7 1 4 ]
+COST = 13 Current Depth = 5	Time: 64400ms
+
+Child 
+[ 3 0 2 ]
+[ 6 8 5 ]
+[ 7 1 4 ]
+COST = 12 Current Depth = 5	Time: 56700ms
+
+Child 
+[ 3 8 2 ]
+[ 6 1 5 ]
+[ 7 0 4 ]
+COST = 12 Current Depth = 5	Time: 51000ms
+ITERATION # 26
+
+*************************************************************************
+
+Parent
+
+[ 2 0 5 ]
+[ 3 6 8 ]
+[ 7 1 4 ]
+COST = 11
+Current Depth == 3
+
+Child 
+[ 0 2 5 ]
+[ 3 6 8 ]
+[ 7 1 4 ]
+COST = 11 Current Depth = 4	Time: 48800ms
+
+Child 
+[ 2 5 0 ]
+[ 3 6 8 ]
+[ 7 1 4 ]
+COST = 12 Current Depth = 4	Time: 47300ms
+
+Child 
+[ 2 6 5 ]
+[ 3 0 8 ]
+[ 7 1 4 ]
+COST = 12 Current Depth = 4	Time: 55200ms
+ITERATION # 27
+
+*************************************************************************
+
+Parent
+
+[ 3 0 2 ]
+[ 6 1 5 ]
+[ 7 4 8 ]
+COST = 11
+Current Depth == 5
+
+Child 
+[ 0 3 2 ]
+[ 6 1 5 ]
+[ 7 4 8 ]
+COST = 11 Current Depth = 6	Time: 47700ms
+
+Child 
+[ 3 2 0 ]
+[ 6 1 5 ]
+[ 7 4 8 ]
+COST = 13 Current Depth = 6	Time: 52400ms
+
+Child 
+[ 3 1 2 ]
+[ 6 0 5 ]
+[ 7 4 8 ]
+COST = 11 Current Depth = 6	Time: 55500ms
+ITERATION # 28
+
+*************************************************************************
+
+Parent
+
+[ 0 2 5 ]
+[ 3 6 8 ]
+[ 7 1 4 ]
+COST = 11
+Current Depth == 4
+
+Child 
+[ 2 0 5 ]
+[ 3 6 8 ]
+[ 7 1 4 ]
+COST = 13 Current Depth = 5	Time: 53000ms
+
+Child 
+[ 3 2 5 ]
+[ 0 6 8 ]
+[ 7 1 4 ]
+COST = 14 Current Depth = 5	Time: 52100ms
+ITERATION # 29
+
+*************************************************************************
+
+Parent
+
+[ 3 1 2 ]
+[ 6 0 5 ]
+[ 7 4 8 ]
+COST = 11
+Current Depth == 6
+
+Child 
+[ 3 1 2 ]
+[ 0 6 5 ]
+[ 7 4 8 ]
+COST = 12 Current Depth = 7	Time: 59900ms
+
+Child 
+[ 3 1 2 ]
+[ 6 5 0 ]
+[ 7 4 8 ]
+COST = 13 Current Depth = 7	Time: 66800ms
+
+Child 
+[ 3 0 2 ]
+[ 6 1 5 ]
+[ 7 4 8 ]
+COST = 13 Current Depth = 7	Time: 60700ms
+
+Child 
+[ 3 1 2 ]
+[ 6 4 5 ]
+[ 7 0 8 ]
+COST = 11 Current Depth = 7	Time: 50600ms
+ITERATION # 30
+
+*************************************************************************
+
+Parent
+
+[ 0 3 2 ]
+[ 6 1 5 ]
+[ 7 4 8 ]
+COST = 11
+Current Depth == 6
+
+Child 
+[ 3 0 2 ]
+[ 6 1 5 ]
+[ 7 4 8 ]
+COST = 13 Current Depth = 7	Time: 57200ms
+
+Child 
+[ 6 3 2 ]
+[ 0 1 5 ]
+[ 7 4 8 ]
+COST = 13 Current Depth = 7	Time: 54700ms
+ITERATION # 31
+
+*************************************************************************
+
+Parent
+
+[ 3 1 2 ]
+[ 6 4 5 ]
+[ 7 0 8 ]
+COST = 11
+Current Depth == 7
+
+Child 
+[ 3 1 2 ]
+[ 6 4 5 ]
+[ 0 7 8 ]
+COST = 11 Current Depth = 8	Time: 53100ms
+
+Child 
+[ 3 1 2 ]
+[ 6 4 5 ]
+[ 7 8 0 ]
+COST = 13 Current Depth = 8	Time: 62300ms
+
+Child 
+[ 3 1 2 ]
+[ 6 0 5 ]
+[ 7 4 8 ]
+COST = 13 Current Depth = 8	Time: 75300ms
+ITERATION # 32
+
+*************************************************************************
+
+Parent
+
+[ 3 1 2 ]
+[ 6 4 5 ]
+[ 0 7 8 ]
+COST = 11
+Current Depth == 8
+
+Child 
+[ 3 1 2 ]
+[ 6 4 5 ]
+[ 7 0 8 ]
+COST = 13 Current Depth = 9	Time: 50400ms
+
+Child 
+[ 3 1 2 ]
+[ 0 4 5 ]
+[ 6 7 8 ]
+COST = 11 Current Depth = 9	Time: 55500ms
+ITERATION # 33
+
+*************************************************************************
+
+Parent
+
+[ 3 1 2 ]
+[ 0 4 5 ]
+[ 6 7 8 ]
+COST = 11
+Current Depth == 9
+
+Child 
+[ 3 1 2 ]
+[ 4 0 5 ]
+[ 6 7 8 ]
+COST = 13 Current Depth = 10	Time: 51500ms
+
+Child 
+[ 0 1 2 ]
+[ 3 4 5 ]
+[ 6 7 8 ]
+COST = 10 Current Depth = 10	Time: 49100ms
+
+Child 
+[ 3 1 2 ]
+[ 6 4 5 ]
+[ 0 7 8 ]
+COST = 13 Current Depth = 10	Time: 52900ms
+ITERATION # 34
+The goal has been found USING TREESEARCH and H1 and it's : 
+[ 0 1 2 ]
+[ 3 4 5 ]
+[ 6 7 8 ]
+This was generated from the starting state: 
+[ 3 2 5 ]
+[ 6 0 8 ]
+[ 7 1 4 ]
+Depth : 10 SearchCost: 90 AvgSearchCost: 9 Total Elapsed Time: 4162803000 nanoseconds
+
+---------------------------Now printing all intermediate nodes!---------------------------
+[3, 2, 5, 6, 1, 8, 7, 0, 4] --> [3, 2, 5, 6, 1, 8, 7, 4, 0] --> [3, 2, 5, 6, 1, 0, 7, 4, 8] --> 
+[3, 2, 0, 6, 1, 5, 7, 4, 8] --> [3, 0, 2, 6, 1, 5, 7, 4, 8] --> [3, 1, 2, 6, 0, 5, 7, 4, 8] --> 
+[3, 1, 2, 6, 4, 5, 7, 0, 8] --> [3, 1, 2, 6, 4, 5, 0, 7, 8] --> [3, 1, 2, 0, 4, 5, 6, 7, 8] --> 
+[0, 1, 2, 3, 4, 5, 6, 7, 8] --> 
+-------------------------------------Complete!--------------------------------------------
+
+ 
+This program solves 8-puzzles using the A* Tree/Graph Search algorithms.
+Please select an option from the following menu: 
+---------------------------------------------------------- 
+1. Generate random puzzle configurations 
+2. Enter a custom configuration. 
+3. Exit 
+---------------------------------------------------------- 
+ Which option?: 

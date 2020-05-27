@@ -1,0 +1,226 @@
+ 
+This program solves 8-puzzles using the A* Tree/Graph Search algorithms.
+Please select an option from the following menu: 
+---------------------------------------------------------- 
+1. Generate random puzzle configurations 
+2. Enter a custom configuration. 
+3. Exit 
+---------------------------------------------------------- 
+ Which option?: 1
+
+---------------------------------------------------------- 
+Which heuristic would you like to evaluate with?: 
+ 1. Hamming Distance (The number of misplaced tiles)
+ 2. Manhattan Distance (The sum of distance away from goal state)
+ 3. Run Both! (Hamming will be first, followed by Manhattan.
+---------------------------------------------------------- 
+Which option?: 3
+This is your generated puzzle
+[ 3 5 4 ]
+[ 6 2 1 ]
+[ 7 8 0 ]
+What type of search? : 
+1. Graph Search 
+2. Tree Search 
+Please enter your option: 
+1
+
+
+---------------------------------------------------------------------------PLEASE READ ------------------------------------------------------------------------------------------------------------------
+ When running both heuristics, I have decided not to show the results of each iteration like previous options did. If you see this with no output below it yet, it simply means it's still calculating. Thank you!
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+The goal has been found USING GRAPHSEARCH and H1 and it's : 
+[ 0 1 2 ]
+[ 3 4 5 ]
+[ 6 7 8 ]
+This was generated from the starting state: 
+[ 3 5 4 ]
+[ 6 2 1 ]
+[ 7 8 0 ]
+Depth : 16 SearchCost: 1626 AvgSearchCost: 101 Total Elapsed Time: 5401793800 nanoseconds
+
+---------------------------Now printing all intermediate nodes!---------------------------
+[3, 5, 4, 6, 2, 0, 7, 8, 1] --> [3, 5, 0, 6, 2, 4, 7, 8, 1] --> [3, 0, 5, 6, 2, 4, 7, 8, 1] --> 
+[3, 2, 5, 6, 0, 4, 7, 8, 1] --> [3, 2, 5, 6, 4, 0, 7, 8, 1] --> [3, 2, 5, 6, 4, 1, 7, 8, 0] --> 
+[3, 2, 5, 6, 4, 1, 7, 0, 8] --> [3, 2, 5, 6, 0, 1, 7, 4, 8] --> [3, 2, 5, 6, 1, 0, 7, 4, 8] --> 
+[3, 2, 0, 6, 1, 5, 7, 4, 8] --> [3, 0, 2, 6, 1, 5, 7, 4, 8] --> [3, 1, 2, 6, 0, 5, 7, 4, 8] --> 
+[3, 1, 2, 6, 4, 5, 7, 0, 8] --> [3, 1, 2, 6, 4, 5, 0, 7, 8] --> [3, 1, 2, 0, 4, 5, 6, 7, 8] --> 
+[0, 1, 2, 3, 4, 5, 6, 7, 8] --> 
+-------------------------------------Complete!--------------------------------------------
+
+
+The goal has been found USING GRAPHSEARCH and H2 and it's : 
+[ 0 1 2 ]
+[ 3 4 5 ]
+[ 6 7 8 ]
+This was generated from the starting state: 
+[ 3 5 4 ]
+[ 6 2 1 ]
+[ 7 8 0 ]
+Depth : 16 SearchCost: 423 AvgSearchCost: 26 Total Elapsed Time: 947800 nanoseconds
+
+---------------------------Now printing all intermediate nodes!---------------------------
+[3, 5, 4, 6, 2, 1, 7, 0, 8] --> [3, 5, 4, 6, 2, 1, 0, 7, 8] --> [3, 5, 4, 0, 2, 1, 6, 7, 8] --> 
+[3, 5, 4, 2, 0, 1, 6, 7, 8] --> [3, 5, 4, 2, 1, 0, 6, 7, 8] --> [3, 5, 0, 2, 1, 4, 6, 7, 8] --> 
+[3, 0, 5, 2, 1, 4, 6, 7, 8] --> [3, 1, 5, 2, 0, 4, 6, 7, 8] --> [3, 1, 5, 0, 2, 4, 6, 7, 8] --> 
+[0, 1, 5, 3, 2, 4, 6, 7, 8] --> [1, 0, 5, 3, 2, 4, 6, 7, 8] --> [1, 2, 5, 3, 0, 4, 6, 7, 8] --> 
+[1, 2, 5, 3, 4, 0, 6, 7, 8] --> [1, 2, 0, 3, 4, 5, 6, 7, 8] --> [1, 0, 2, 3, 4, 5, 6, 7, 8] --> 
+[0, 1, 2, 3, 4, 5, 6, 7, 8] --> 
+-------------------------------------Complete!--------------------------------------------
+
+ 
+This program solves 8-puzzles using the A* Tree/Graph Search algorithms.
+Please select an option from the following menu: 
+---------------------------------------------------------- 
+1. Generate random puzzle configurations 
+2. Enter a custom configuration. 
+3. Exit 
+---------------------------------------------------------- 
+ Which option?: 1
+
+---------------------------------------------------------- 
+Which heuristic would you like to evaluate with?: 
+ 1. Hamming Distance (The number of misplaced tiles)
+ 2. Manhattan Distance (The sum of distance away from goal state)
+ 3. Run Both! (Hamming will be first, followed by Manhattan.
+---------------------------------------------------------- 
+Which option?: 3
+This is your generated puzzle
+[ 2 8 3 ]
+[ 1 7 4 ]
+[ 6 0 5 ]
+What type of search? : 
+1. Graph Search 
+2. Tree Search 
+Please enter your option: 
+2
+
+
+---------------------------------------------------------------------------PLEASE READ -------------------------------------------------------------------------------------------------------------------------
+ When running both heuristics, I have decided not to show the results of each iteration like previous options did. If you see this with no output below it yet, it simply means it's still calculating. Thank you!
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+The goal has been found USING TREESEARCH and H1 and it's : 
+[ 0 1 2 ]
+[ 3 4 5 ]
+[ 6 7 8 ]
+This was generated from the starting state: 
+[ 2 8 3 ]
+[ 1 7 4 ]
+[ 6 0 5 ]
+Depth : 19 SearchCost: 9857 AvgSearchCost: 518 Total Elapsed Time: 4079420100 nanoseconds
+
+---------------------------Now printing all intermediate nodes!---------------------------
+[2, 8, 3, 1, 0, 4, 6, 7, 5] --> [2, 0, 3, 1, 8, 4, 6, 7, 5] --> [0, 2, 3, 1, 8, 4, 6, 7, 5] --> 
+[1, 2, 3, 0, 8, 4, 6, 7, 5] --> [1, 2, 3, 6, 8, 4, 0, 7, 5] --> [1, 2, 3, 6, 8, 4, 7, 0, 5] --> 
+[1, 2, 3, 6, 0, 4, 7, 8, 5] --> [1, 2, 3, 6, 4, 0, 7, 8, 5] --> [1, 2, 0, 6, 4, 3, 7, 8, 5] --> 
+[1, 0, 2, 6, 4, 3, 7, 8, 5] --> [1, 4, 2, 6, 0, 3, 7, 8, 5] --> [1, 4, 2, 6, 3, 0, 7, 8, 5] --> 
+[1, 4, 2, 6, 3, 5, 7, 8, 0] --> [1, 4, 2, 6, 3, 5, 7, 0, 8] --> [1, 4, 2, 6, 3, 5, 0, 7, 8] --> 
+[1, 4, 2, 0, 3, 5, 6, 7, 8] --> [1, 4, 2, 3, 0, 5, 6, 7, 8] --> [1, 0, 2, 3, 4, 5, 6, 7, 8] --> 
+[0, 1, 2, 3, 4, 5, 6, 7, 8] --> 
+-------------------------------------Complete!--------------------------------------------
+
+
+The goal has been found USING TREESEARCH and H2 and it's : 
+[ 0 1 2 ]
+[ 3 4 5 ]
+[ 6 7 8 ]
+This was generated from the starting state: 
+[ 2 8 3 ]
+[ 1 7 4 ]
+[ 6 0 5 ]
+Depth : 19 SearchCost: 2282 AvgSearchCost: 120 Total Elapsed Time: 4429400 nanoseconds
+
+---------------------------Now printing all intermediate nodes!---------------------------
+[2, 8, 3, 1, 0, 4, 6, 7, 5] --> [2, 0, 3, 1, 8, 4, 6, 7, 5] --> [0, 2, 3, 1, 8, 4, 6, 7, 5] --> 
+[1, 2, 3, 0, 8, 4, 6, 7, 5] --> [1, 2, 3, 6, 8, 4, 0, 7, 5] --> [1, 2, 3, 6, 8, 4, 7, 0, 5] --> 
+[1, 2, 3, 6, 0, 4, 7, 8, 5] --> [1, 2, 3, 6, 4, 0, 7, 8, 5] --> [1, 2, 0, 6, 4, 3, 7, 8, 5] --> 
+[1, 0, 2, 6, 4, 3, 7, 8, 5] --> [1, 4, 2, 6, 0, 3, 7, 8, 5] --> [1, 4, 2, 6, 3, 0, 7, 8, 5] --> 
+[1, 4, 2, 6, 3, 5, 7, 8, 0] --> [1, 4, 2, 6, 3, 5, 7, 0, 8] --> [1, 4, 2, 6, 3, 5, 0, 7, 8] --> 
+[1, 4, 2, 0, 3, 5, 6, 7, 8] --> [1, 4, 2, 3, 0, 5, 6, 7, 8] --> [1, 0, 2, 3, 4, 5, 6, 7, 8] --> 
+[0, 1, 2, 3, 4, 5, 6, 7, 8] --> 
+-------------------------------------Complete!--------------------------------------------
+
+ 
+This program solves 8-puzzles using the A* Tree/Graph Search algorithms.
+Please select an option from the following menu: 
+---------------------------------------------------------- 
+1. Generate random puzzle configurations 
+2. Enter a custom configuration. 
+3. Exit 
+---------------------------------------------------------- 
+ Which option?: 1
+
+---------------------------------------------------------- 
+Which heuristic would you like to evaluate with?: 
+ 1. Hamming Distance (The number of misplaced tiles)
+ 2. Manhattan Distance (The sum of distance away from goal state)
+ 3. Run Both! (Hamming will be first, followed by Manhattan.
+---------------------------------------------------------- 
+Which option?: 3
+This is your generated puzzle
+[ 1 4 3 ]
+[ 0 7 5 ]
+[ 8 6 2 ]
+What type of search? : 
+1. Graph Search 
+2. Tree Search 
+Please enter your option: 
+1
+
+
+---------------------------------------------------------------------------PLEASE READ ------------------------------------------------------------------------------------------------------------------
+ When running both heuristics, I have decided not to show the results of each iteration like previous options did. If you see this with no output below it yet, it simply means it's still calculating. Thank you!
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+The goal has been found USING GRAPHSEARCH and H1 and it's : 
+[ 0 1 2 ]
+[ 3 4 5 ]
+[ 6 7 8 ]
+This was generated from the starting state: 
+[ 1 4 3 ]
+[ 0 7 5 ]
+[ 8 6 2 ]
+Depth : 21 SearchCost: 31301 AvgSearchCost: 1490 Total Elapsed Time: 3942842700 nanoseconds
+
+---------------------------Now printing all intermediate nodes!---------------------------
+[1, 4, 3, 7, 0, 5, 8, 6, 2] --> [1, 4, 3, 7, 5, 0, 8, 6, 2] --> [1, 4, 0, 7, 5, 3, 8, 6, 2] --> 
+[1, 0, 4, 7, 5, 3, 8, 6, 2] --> [1, 5, 4, 7, 0, 3, 8, 6, 2] --> [1, 5, 4, 7, 6, 3, 8, 0, 2] --> 
+[1, 5, 4, 7, 6, 3, 0, 8, 2] --> [1, 5, 4, 0, 6, 3, 7, 8, 2] --> [1, 5, 4, 6, 0, 3, 7, 8, 2] --> 
+[1, 5, 4, 6, 3, 0, 7, 8, 2] --> [1, 5, 4, 6, 3, 2, 7, 8, 0] --> [1, 5, 4, 6, 3, 2, 7, 0, 8] --> 
+[1, 5, 4, 6, 3, 2, 0, 7, 8] --> [1, 5, 4, 0, 3, 2, 6, 7, 8] --> [1, 5, 4, 3, 0, 2, 6, 7, 8] --> 
+[1, 0, 4, 3, 5, 2, 6, 7, 8] --> [1, 4, 0, 3, 5, 2, 6, 7, 8] --> [1, 4, 2, 3, 5, 0, 6, 7, 8] --> 
+[1, 4, 2, 3, 0, 5, 6, 7, 8] --> [1, 0, 2, 3, 4, 5, 6, 7, 8] --> [0, 1, 2, 3, 4, 5, 6, 7, 8] --> 
+-------------------------------------Complete!--------------------------------------------
+
+
+The goal has been found USING GRAPHSEARCH and H2 and it's : 
+[ 0 1 2 ]
+[ 3 4 5 ]
+[ 6 7 8 ]
+This was generated from the starting state: 
+[ 1 4 3 ]
+[ 0 7 5 ]
+[ 8 6 2 ]
+Depth : 21 SearchCost: 2317 AvgSearchCost: 110 Total Elapsed Time: 2752300 nanoseconds
+
+---------------------------Now printing all intermediate nodes!---------------------------
+[1, 4, 3, 7, 0, 5, 8, 6, 2] --> [1, 4, 3, 7, 5, 0, 8, 6, 2] --> [1, 4, 0, 7, 5, 3, 8, 6, 2] --> 
+[1, 0, 4, 7, 5, 3, 8, 6, 2] --> [1, 5, 4, 7, 0, 3, 8, 6, 2] --> [1, 5, 4, 7, 6, 3, 8, 0, 2] --> 
+[1, 5, 4, 7, 6, 3, 0, 8, 2] --> [1, 5, 4, 0, 6, 3, 7, 8, 2] --> [1, 5, 4, 6, 0, 3, 7, 8, 2] --> 
+[1, 5, 4, 6, 3, 0, 7, 8, 2] --> [1, 5, 4, 6, 3, 2, 7, 8, 0] --> [1, 5, 4, 6, 3, 2, 7, 0, 8] --> 
+[1, 5, 4, 6, 3, 2, 0, 7, 8] --> [1, 5, 4, 0, 3, 2, 6, 7, 8] --> [1, 5, 4, 3, 0, 2, 6, 7, 8] --> 
+[1, 0, 4, 3, 5, 2, 6, 7, 8] --> [1, 4, 0, 3, 5, 2, 6, 7, 8] --> [1, 4, 2, 3, 5, 0, 6, 7, 8] --> 
+[1, 4, 2, 3, 0, 5, 6, 7, 8] --> [1, 0, 2, 3, 4, 5, 6, 7, 8] --> [0, 1, 2, 3, 4, 5, 6, 7, 8] --> 
+-------------------------------------Complete!--------------------------------------------
+
+ 
+This program solves 8-puzzles using the A* Tree/Graph Search algorithms.
+Please select an option from the following menu: 
+---------------------------------------------------------- 
+1. Generate random puzzle configurations 
+2. Enter a custom configuration. 
+3. Exit 
+---------------------------------------------------------- 
+ Which option?: 
